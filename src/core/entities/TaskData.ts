@@ -7,8 +7,8 @@ export interface TaskData {
   description: string;
   type: TaskType;
   status: TaskStatus;
-  createdAt: Date;
+  createdAt?: Date;
   updatedAt?: Date;
-  assignee?: string;
+  assignee: string;
   reporter: string;
-}
+} 
