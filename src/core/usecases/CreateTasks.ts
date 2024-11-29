@@ -6,17 +6,19 @@ import { TaskStatus } from "../entities/TaskStatus";
 
 
 
-export interface CreateTasksPayload {
+export  interface CreateTasksPayload {
     id?: string;
     summary: string;
     description: string;
     type: TaskType;
     status: TaskStatus;
-    createdAt: Date;
+    createdAt: Date | undefined;
     updatedAt: Date;
     assignee: string;
     reporter: string;
 }
+
+
 
 export class CreateTask {
     
