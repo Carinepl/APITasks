@@ -24,6 +24,7 @@ describe("FindAllTasks", () => {
       description: "Test description",
       status: TaskStatus.OPEN,
       type: TaskType.BUG,
+      assignee: "",
       reporter: "Test reporter",
       createdAt: new Date(),
     })
