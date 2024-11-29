@@ -25,7 +25,8 @@ describe("UpdateTask", () => {
         summary: "Test task",
         description: "Test description",
         status: TaskStatus.OPEN,
-        type: TaskType.BUG, // "BUG" !== TaskType.BUG => keyof TaskType
+        type: TaskType.BUG, 
+        assignee: "",
         reporter: "Test reporter",
         createdAt: new Date(),
       }),
@@ -34,7 +35,8 @@ describe("UpdateTask", () => {
         summary: "Test task",
         description: "Test description",
         status: TaskStatus.DONE,
-        type: TaskType.BUG, // "BUG" !== TaskType.BUG => keyof TaskType
+        type: TaskType.BUG, 
+        assignee: "",
         reporter: "Test reporter",
         createdAt: new Date(),
       }),
@@ -62,7 +64,7 @@ describe("UpdateTask", () => {
     expect(updateTask.getReporter()).toBe(payload.reporter);
   });
 
-  // CAMINHO TRISTE
+
   it("should not update a task with a specific id if it is already done", async () => {
     const invalidId = 'invalid-id';
     const payload: UpdateTaskPayload = {
