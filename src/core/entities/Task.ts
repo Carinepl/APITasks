@@ -11,10 +11,10 @@ export class Task {
     private description: string;
     private type: TaskType;
     private status: TaskStatus;
-    private createdAt: Date;
+    private createdAt?: Date;
     private updatedAt?: Date;
-    private assignee?: string;
-    private reporter?: string
+    private assignee: string;
+    private reporter: string
 
 
 
@@ -61,7 +61,7 @@ export class Task {
         return this.status;
     }
 
-    public getCreatedAt(): Date {
+    public getCreatedAt(): Date | undefined {
         return this.createdAt;
     }
 
@@ -76,6 +76,8 @@ export class Task {
     public getReporter(): string | undefined {
         return this.reporter;
     }
+
+    
 
     public setSummary(summary: string) {
         this.summary = summary;
