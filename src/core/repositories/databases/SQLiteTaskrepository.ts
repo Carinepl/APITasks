@@ -1,4 +1,4 @@
-import { openDb } from "../../entities/infra/databases/sqlite";
+import { openDb } from "../../../infra/databases/sqlite";
 import { Task } from "../../entities/Task";
 import { TaskRepository } from "../contracts/TaskRepository";
 
