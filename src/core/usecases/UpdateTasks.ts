@@ -1,11 +1,11 @@
-import { Task } from "../entities/Task";
+
 import { TaskStatus } from "../entities/TaskStatus";
 import { TaskType } from "../entities/TaskType";
 import { InvalidOperationException } from "../exceptions/InvalidOperationException";
 import { ResourceNotFoundException } from "../exceptions/ResourceNotFoundException";
 import { TaskRepository } from "../repositories/contracts/TaskRepository";
 
-// TIPAGEM DO PAYLOAD
+
 export interface UpdateTaskPayload {
   summary: string;
   description: string;
