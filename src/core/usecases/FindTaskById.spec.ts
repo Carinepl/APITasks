@@ -1,13 +1,13 @@
-import { TaskData } from './../entities/TaskData';
+
 import { beforeEach, describe, expect, it } from "vitest";
 import { InMemoryTaskRepository } from "../repositories/in-memory/InMemoryTaskRepository";
-import { FindAllTasks } from "./FindAllTasks";
 import { Task } from "../entities/Task";
 import { FindTaskById } from "./FindTasksById";
 import { randomUUID } from "node:crypto";
 import { ResourceNotFoundException } from "../exceptions/ResourceNotFoundException";
 import { TaskType } from "../entities/TaskType";
 import { TaskStatus } from "../entities/TaskStatus";
+
 
 let repository: InMemoryTaskRepository;
 let sut: FindTaskById;
@@ -23,14 +23,14 @@ describe("FindTaskById", () => {
       id: mockedId,
       summary: "Test task",
       description: "Test description",
-      status:  TaskStatus.TODO,
-      type: TaskType.BUG,
-      reporter:"Test Reporter",
+      status:TaskStatus.TODO,
+      type: TaskType.BUG, 
+      assignee: "",
+      reporter: "Test reporter",
       createdAt: new Date(),
     })
     repository.tasks.push(mockedTask);
   });
-
 
   it("should return a task with a specific id", async () => {
     const task = await sut.execute(mockedId);
