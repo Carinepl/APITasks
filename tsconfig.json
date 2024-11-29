@@ -9,6 +9,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*", "src/core/entities/infra"],
+  "include": ["src/**/*", "src/infra"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
