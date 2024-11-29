@@ -4,14 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "-": "^0.0.1",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "global": "^4.4.0",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
+    "yarn": "^1.22.22",
     "zod": "^3.23.8"
   },
   "scripts": {
-    "dev": "nodemon src/server.ts",
+    "dev": "ts-node src/server.ts",
     "start": "node dist/server.js",
     "build": "tsc",
     "test": "vitest"
@@ -24,5 +27,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.6"
-  }
+  },
+  "repository": "https://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@github.com/Carinepl/APITasks.git"
 }
